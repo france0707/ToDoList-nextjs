@@ -1,4 +1,5 @@
 import React from "react";
+import AddButton from "./AddButton";
 
 const AddTask = () => {
 	return (
@@ -7,9 +8,7 @@ const AddTask = () => {
 				type="text"
 				className="w-3/4 px-2 py-1 border-2 rounded-lg"
 			></input>
-			<button className="bg-green-400 px-4 rounded-lg text-center">
-				ADD
-			</button>
+			<AddButton></AddButton>
 		</div>
 	);
 };
