@@ -1,11 +1,17 @@
 import React from "react";
 import Item from "./Item";
 
-const List = () => {
+interface ListProps {
+	tasks: string[];
+}
+
+const List: React.FC<ListProps> = ({ tasks }) => {
 	return (
-		<div className="">
+		<div>
 			<ul>
-				<Item></Item>
+				{tasks.map((task, index) => (
+					<Item key={index} task={task} />
+				))}
 			</ul>
 		</div>
 	);
