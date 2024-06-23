@@ -23,7 +23,7 @@ const AddTask: React.FC<AddTaskProps> = ({ addTask }) => {
 				className="w-3/4 h-full px-2 py-1 border-2 rounded-lg"
 				onChange={(e) => setTaskValue(e.target.value)}
 			></input>
-			<AddButton onClick={handleAddTask}></AddButton>
+			<AddButton onClick={handleAddTask} />
 		</div>
 	);
 };

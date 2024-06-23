@@ -17,9 +17,9 @@ const AppContainer: React.FC = () => {
 
 	return (
 		<div className="bg-slate-200  w-3/5 h-full mx-auto flex flex-col justify-center">
-			<Header></Header>
-			<AddTask addTask={addTask}></AddTask>
-			<List tasks={tasks} deleteTask={deleteTask}></List>
+			<Header />
+			<AddTask addTask={addTask} />
+			<List tasks={tasks} deleteTask={deleteTask} />
 		</div>
 	);
 };
