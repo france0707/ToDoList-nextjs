@@ -16,13 +16,21 @@ const AddTask: React.FC<AddTaskProps> = ({ addTask }) => {
 		}
 	};
 
+	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+		if (event.key === "Enter") {
+			handleAddTask();
+		}
+	};
+
 	return (
-		<div className="flex flex-row w-full h-14 justify-evenly p-2 my-5">
+		<div className="sticky top-0 bg-inherit flex flex-row w-full h-16 justify-center items-center py-3 my-5">
 			<input
 				type="text"
-				className="w-3/4 h-full px-2 py-1 border-2 rounded-lg"
+				className="w-3/4 h-full px-2 py-1 border-2 rounded-lg border-purple-300 outline-none"
+				value={taskValue}
 				onChange={(e) => setTaskValue(e.target.value)}
-			></input>
+				onKeyDown={handleKeyDown}
+			/>
 			<AddButton onClick={handleAddTask} />
 		</div>
 	);

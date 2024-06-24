@@ -16,9 +16,10 @@ const AppContainer: React.FC = () => {
 	};
 
 	return (
-		<div className="bg-slate-200  w-3/5 h-full mx-auto flex flex-col justify-center">
+		<div className="bg-gray-50 min-w-96 max-w-xl sm:mt-8 h-full mx-auto flex flex-col justify-center rounded-md">
 			<Header />
 			<AddTask addTask={addTask} />
+			<hr />
 			<List tasks={tasks} deleteTask={deleteTask} />
 		</div>
 	);
