@@ -4,15 +4,23 @@ import Header from "./Header";
 import AddTask from "./AddTask";
 import List from "./List";
 
+interface Task {
+	id: number;
+	text: string;
+}
+
 const AppContainer: React.FC = () => {
-	const [tasks, setTasks] = useState<string[]>([]);
+	const [tasks, setTasks] = useState<Task[]>([]);
+	const [taskId, setTaskId] = useState<number>(0);
 
 	const addTask = (task: string) => {
-		setTasks([...tasks, task]);
+		const newTask = { id: taskId, text: task };
+		setTasks((prevTasks) => [...prevTasks, newTask]);
+		setTaskId((prevId) => prevId + 1);
 	};
 
-	const deleteTask = (index: number) => {
-		setTasks(tasks.filter((_, i) => i !== index));
+	const deleteTask = (id: number) => {
+		setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
 	};
 
 	return (

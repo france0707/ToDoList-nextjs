@@ -2,7 +2,7 @@ import AppContainer from "./ui/AppContainer";
 
 export default function Home() {
 	return (
-		<main className="">
+		<main>
 			<AppContainer></AppContainer>
 		</main>
 	);

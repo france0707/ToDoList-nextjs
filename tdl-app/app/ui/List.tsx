@@ -3,8 +3,8 @@ import Item from "./Item";
 import ListPlaceHolder from "./ListPlaceHolder";
 
 interface ListProps {
-	tasks: string[];
-	deleteTask: (index: number) => void;
+	tasks: { id: number; text: string }[];
+	deleteTask: (id: number) => void;
 }
 
 const List: React.FC<ListProps> = ({ tasks, deleteTask }) => {
@@ -14,11 +14,10 @@ const List: React.FC<ListProps> = ({ tasks, deleteTask }) => {
 				{tasks.length === 0 ? (
 					<ListPlaceHolder />
 				) : (
-					tasks.map((task, index) => (
+					tasks.map((task) => (
 						<Item
-							key={index}
+							key={task.id}
 							task={task}
-							index={index}
 							deleteTask={deleteTask}
 						/>
 					))

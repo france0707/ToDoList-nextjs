@@ -9,7 +9,7 @@ interface AddButtonProps {
 const AddButton: React.FC<AddButtonProps> = ({ onClick }) => {
 	return (
 		<button
-			className="h-fit w-12 mx-4 rounded-md flex justify-center items-center"
+			className="h-fit w-12 mx-4 rounded-md flex justify-center items-center "
 			onClick={onClick}
 		>
 			<FontAwesomeIcon
