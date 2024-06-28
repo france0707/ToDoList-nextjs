@@ -9,7 +9,7 @@ interface DeleteButtonProps {
 const DeleteButton: React.FC<DeleteButtonProps> = ({ onClick }) => {
 	return (
 		<button
-			className="bg-red-500 hover:bg-red-700 w-10 h-10 flex justify-center items-center rounded-md"
+			className="bg-red-500 hover:bg-red-700 w-10 h-10 flex justify-center items-center rounded-md transform transition-transform duration-100 focus:outline-none active:scale-90"
 			onClick={onClick}
 		>
 			<FontAwesomeIcon className="text-xl" icon={faTrashCan} />

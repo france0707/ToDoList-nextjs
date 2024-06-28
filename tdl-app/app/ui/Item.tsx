@@ -24,7 +24,7 @@ const Item: React.FC<ItemProps> = ({ task, deleteTask }) => {
 			>
 				<div className="w-4/5 flex flex-row justify-start items-center">
 					<PendingButton />
-					<p className="p-4 w-full h-auto">{task.text}</p>
+					<p className="p-4 w-full h-auto font-medium">{task.text}</p>
 				</div>
 
 				<DeleteButton onClick={handleDelete} />

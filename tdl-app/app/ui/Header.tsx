@@ -13,13 +13,15 @@ const Header: React.FC = () => {
 
 	return (
 		<div className="w-auto h-32 rounded-md overflow-hidden">
-			<div className="bg-purple-800 w-full h-full rounded-br-full p-4">
-				<h1 className="mb-4 text-5xl font-bold text-white text-center">
-					To Do List
+			<div className="bg-gradient-to-l from-violet-600 to-purple-800 w-full h-full rounded-br-full p-4">
+				<h1 className="mb-4 text-5xl font-extrabold text-white text-center">
+					TO DO LIST
 				</h1>
-				<h2 className="text-3xl font-medium text-white">
+				<h2 className="text-3xl font-bold text-white">
 					{formattedDay},{" "}
-					<span className="text-xl">{formattedDate}</span>
+					<span className="text-lg font-semibold">
+						{formattedDate}
+					</span>
 				</h2>
 			</div>
 		</div>

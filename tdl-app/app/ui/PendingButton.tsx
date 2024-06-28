@@ -9,7 +9,7 @@ const PendingButton = () => {
 
 	return (
 		<button
-			className={`w-auto h-auto px-2 py-1 text-center rounded-md ${
+			className={`w-auto h-auto px-2 py-1 text-center rounded-md transform transition-transform duration-100 focus:outline-none active:scale-90 ${
 				isPending
 					? "bg-gray-200 hover:bg-gray-400"
 					: "bg-green-400 hover:bg-green-600"
