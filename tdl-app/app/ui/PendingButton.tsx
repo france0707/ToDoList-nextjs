@@ -9,9 +9,9 @@ const PendingButton = () => {
 
 	return (
 		<button
-			className={`w-auto h-auto px-2 py-1 text-center rounded-md transform transition-transform duration-100 focus:outline-none active:scale-90 ${
+			className={`w-auto h-auto px-2 py-1 font-medium text-center rounded-md transform transition-transform duration-100 focus:outline-none active:scale-90 ${
 				isPending
-					? "bg-gray-200 hover:bg-gray-400"
+					? "bg-slate-400 hover:bg-slate-500"
 					: "bg-green-400 hover:bg-green-600"
 			}`}
 			onClick={handleClick}
